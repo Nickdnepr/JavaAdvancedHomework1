@@ -2,7 +2,6 @@ package com.learning;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FilenameFilter;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -15,15 +14,9 @@ public class FileManager {
     }
 
     public void cd(String path) throws FileNotFoundException {
-//        pointer = new File(path);
-
         if (pointer != null) {
             if (path.equals("..")) {
                 path = pointer.getPath().substring(0, pointer.getPath().lastIndexOf(File.separator)+1);
-                if (path.isEmpty()){
-//                    path = ""
-                }
-//                System.out.println("UP "+ path);
             } else {
                 String[] list = pointer.list();
                 if (list != null) {
