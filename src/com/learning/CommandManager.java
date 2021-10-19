@@ -39,7 +39,7 @@ public class CommandManager {
                 } else if (commandBody.equals("ls")) {
                     fileManager.ls();
                 } else if (commandBody.equals("cat")) {
-
+                    fileManager.cat(commandArgument);
                 } else{
                     System.out.println("Invalid command");
                 }
